@@ -1,0 +1,64 @@
+body {
+  background-color: rgba(7, 6, 6, 0.934);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body a {
+  color: white;
+  text-decoration: none;
+}
+
+body ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.icon ul li i {
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.icon ul li a {
+  font-size: 20px;
+}  
+
+.social_link {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 20px;
+}
+.social_link a {
+  margin: 0 40px 0 0;
+}  
+
+.about div {
+  height: 100%;
+  width: 90%;
+  border-radius: 0.5em;
+  background-color: #121212;
+}
+
+.about div p {
+  font-size: 20px;
+  margin: 20px 20px 20px 20px;
+}
+
+.skills ul {
+  height: 100%;
+  width: 40%;
+  border-radius: 0.5em;
+  background-color: #121212;
+  padding-bottom: 2px;
+}
+.skills ul li {
+  font-size: 20px;
+  margin: 20px 20px 20px 20px;
+}
+.skills ul li:first-child {
+  padding-top: 10px;
+}
