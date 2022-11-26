@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>HRX Fashion</title>
+    
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+
+
+</head>
+    <body>
+
+      {% block body %}
+
+      <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><b><img class="logo" src="{{url_for('static', filename='logo.jpg')}}" align="middle" /></b></div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <!-- USING CHECKBOX HACK -->
+           <!--<input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          NAVIGATION MENUS -->
+          <div class="menu">
+            <li ><a href="{{ url_for('home') }}"><p class="online">Home</p></a></li>
+            <li><a href="{{ url_for('dashboard') }}">Products</a></li>
+            <li class="services">
+              <a href="/">Pages</a>
+              <!-- DROPDOWN MENU -->
+              <ul class="dropdown">
+                <li><a href="/">T-Shirts </a></li>
+                <li><a href="/">Casual T-Shirts</a></li>
+                <li><a href="/">Formal Shirts</a></li>
+                <li><a href="/">Jacket</a></li>
+                <li><a href="/">Shoes</a></li>
+              </ul>
+            </li>
+           
+            <li><a href="{{ url_for('login') }}">Account</a></li>
+            <li><a href="{{ url_for('cart') }}">Cart</a></li>
+            
+            
+          </div>
+        </ul>
+      </nav>
+
+           
+ 
+{% endblock %}
+</body>
+</html>

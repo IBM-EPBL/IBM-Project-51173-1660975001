@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>HRX Fashion</title>
+    
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "7cd5d475-a89e-4c80-a886-8d6e0d93e9dd", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "bc059956-dc2d-4a1f-afa2-439d725a191c", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+
+
+
+</head>
+    <body>
+
+     
+
+      <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><b><img class="logo" src="{{url_for('static', filename='logo.jpg')}}" align="middle" /></b></div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <!-- USING CHECKBOX HACK -->
+           <!--<input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          NAVIGATION MENUS -->
+          <div class="menu">
+            <li ><a href="{{ url_for('home') }}"><p class="online">Home</p></a></li>
+            <li><a href="{{ url_for('dashboard') }}">Products</a></li>
+            <li class="services">
+              <a href="/">Pages</a>
+              <!-- DROPDOWN MENU -->
+              <ul class="dropdown">
+                <li><a href="/">T-Shirts </a></li>
+                <li><a href="/">Casual T-Shirts</a></li>
+                <li><a href="/">Formal Shirts</a></li>
+                <li><a href="/">Jacket</a></li>
+                <li><a href="/">Shoes</a></li>
+              </ul>
+            </li>
+           
+            <li><a href="{{ url_for('login') }}">Account</a></li>
+            <li><a href="{{ url_for('cart') }}">Cart</a></li>
+            
+            
+          </div>
+        </ul>
+      </nav>
+
+          <header>
+            <h2>OUR PRODUCTS</h2>
+            <h4>Home >> Products</h4>
+        </header>
+
+        
+
+        <!-- <h1>hello Ashfaqe</h1>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Register</a>
+        <a href="{{ url_for('dashboard') }}">dashboard</a>
+        <a href="{{ url_for('home') }}">Index</a>-->
+{% block body %}
+
+
+<div class="title"><h2>Featured Products</h2></div>
+
+<div class="products">
+<div class="row">
+
+
+  <div class="column">
+    <div class="card">
+      <a href="{{ url_for('product') }}" >
+        <img class="images" src=
+       "https://assets.ajio.com/medias/sys_master/root/20221117/5h3S/6375d6fcaeb269659c97f575/dennislingo-premium-attire-black-classic-slim-fit-shirt-with-patch-pocket.jpg"
+      /></a>
+      <strong><p>Jhon Players</p></strong>
+      <p>Slim Fit Shirt</p>
+      <strong><p>RS : 750/-</p></strong>
+    </div>
+  </div>  
+
+
+  <div class="column">
+    <div class="card">
+      <a href="{{ url_for('product') }}" >
+        <img class="images" src=
+       "https://assets.ajio.com/medias/sys_master/root/20221121/XGZR/637b5531f997ddfdbd87764e/dennislingo-premium-attire-green-classic-full-sleeves-slim-fit-shirt.jpg"
+      /></a>
+      <strong><p>Peter England</p></strong>
+      <p>Slim Fit Shirt</p>
+      <strong><p>RS : 700/-</p></strong>
+    </div>
+  </div>  
+
+    
+
+
+      <div class="column">
+        <div class="card">
+          <a href="{{ url_for('product') }}" >
+            <img class="images" src="https://www.redwolf.in/image/cache/catalog/mens-t-shirts/full-sleeves/spider-man-logo-full-sleeves-t-shirt-india-2-700x700.jpg">
+            </a>
+          <strong><p>Red Hoodies</p></strong>
+          <p>Hoodies</p>
+          <strong><p>RS : 1049/-</p></strong>
+        </div>
+      </div> 
+
+
+      <div class="column">
+        <div class="card">
+          <a href="{{ url_for('product') }}" >
+            <img class="images" src="https://assets.ajio.com/medias/sys_master/root/h71/hcb/14969096110110/difference-of-opinion-yellow-hoodies-typographic-hoodie.jpg">
+            </a>
+          <strong><p>Million Club</p></strong>
+          <p>Hoodies</p>
+          <strong><p>RS : 520/-</p></strong>
+        </div>
+      </div>
+      
+      
+      <div class="column">
+        <div class="card">
+          <a href="{{ url_for('product') }}" >
+          <img src="https://storage.googleapis.com/brained-uat/hrx/subcatImage/subcatImage-Vts_V97DtVrvhvSEIJwbQ-1662612896">
+          </a>
+          <strong><p>HRX</p></strong>
+          <p>Yellor T-Shirt</p>
+          <strong><p>RS : 540/-</p></strong>
+        </div>
+      </div>
+
+
+      <div class="column">
+        <div class="card">
+          <a href="{{ url_for('product') }}" >
+          <img src="https://assets.ajio.com/medias/sys_master/root/20220901/HOL6/6310ee7aaeb269dbb361c4cd/eyebogler-green-polo-striped-polo-t-shirt.jpg">
+          </a>
+          <strong><p>Eyebogler</p></strong>
+          <p>Polo T-Shirt</p>
+          <strong><p>RS : 450/-</p></strong>
+        </div>
+      </div>
+
+
+
+      <div class="column">
+        <div class="card">
+          <a href="{{ url_for('product') }}" >
+            <img class="images" src=
+           "https://assets.ajio.com/medias/sys_master/root/20220921/RHqq/632acc02f997dd1f8d104b2e/gorgone-grey-printed-floral-print-mysore-silk-saree.jpg"
+          /></a>
+          <strong><p>Goregone</p></strong>
+          <p>Silk Saree</p>
+          <strong><p>RS : 2500/-</p></strong>
+        </div>
+      </div>  
+
+
+      <div class="column">
+        <div class="card">
+          <a href="{{ url_for('product') }}" >
+            <img class="images" src=
+           "https://assets.ajio.com/medias/sys_master/root/20220919/ayzk/632852e3aeb269dbb3934ee4/gorgone-red-printed-ethnic-print-mysore-silk-saree.jpg"
+          /></a>
+          <strong><p>Goregone</p></strong>
+          <p>Silk Saree</p>
+          <strong><p>RS : 2500/-</p></strong>
+        </div>
+      </div>  
+
+
+      <div class="column">
+        <div class="card">
+          <a href="{{ url_for('product') }}" >
+            <img class="images" src=
+           "https://assets.ajio.com/medias/sys_master/root/20210404/uPDv/606a4fa47cdb8c1f14964fa9/t-tabard-blue-regular-kurtas-floral-print-long-kurta.jpg"
+          /></a>
+          <strong><p>T Tabrid</p></strong>
+          <p>Long Kurta</p>
+          <strong><p>RS : 1200/-</p></strong>
+        </div>
+      </div>  
+
+
+
+      <div class="column">
+        <div class="card">
+          <a href="{{ url_for('product') }}" >
+            <img class="images" src=
+           "https://assets.ajio.com/medias/sys_master/root/20211111/TEEy/618d497ff997ddf8f10255f7/namaskar-red-regular-kurtas-block-print-long-kurta-with-mandarin-collar.jpg"
+          /></a>
+          <strong><p>Namaskar</p></strong>
+          <p>Long Kurta</p>
+          <strong><p>RS : 1400/-</p></strong>
+        </div>
+      </div>  
+
+
+      <div class="column">
+        <div class="card">
+          <a href="{{ url_for('product') }}" >
+            <img class="images" src=
+           "https://assets.ajio.com/medias/sys_master/root/20220121/tjjr/61ea8001aeb2695cdd26b614/clafoutis-black-crew-full-sleeves-turtleneck-t-shirt.jpg"
+          /></a>
+          <strong><p>Clafoutis</p></strong>
+          <p>T-Shirts</p>
+          <strong><p>RS : 700/-</p></strong>
+        </div>
+      </div>  
+
+
+      <div class="column">
+        <div class="card">
+          <a href="{{ url_for('product') }}" >
+            <img class="images" src=
+           "https://assets.ajio.com/medias/sys_master/root/20220217/NLKI/620e5ccef997dd03e2d5f523/gespo-blue-crew-high-neck-slim-fit-t-shirt.jpg"
+          /></a>
+          <strong><p>Gespo</p></strong>
+          <p>T-Shirts</p>
+          <strong><p>RS : 390/-</p></strong>
+        </div>
+      </div> 
+
+
+    
+
+                
+
+   
+
+    
+
+    
+  
+   
+
+  
+  
+    
+  </div>
+
+</div>
+ 
+
+ 
+ 
+{% endblock %}
+    </body>
+</html>
