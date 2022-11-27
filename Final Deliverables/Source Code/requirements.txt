@@ -1,2 +1,4 @@
-Flask
+flask
 ibm-db
+flask_mail
+bcrypt
