@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title>Product</title>
+
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "7cd5d475-a89e-4c80-a886-8d6e0d93e9dd", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "bc059956-dc2d-4a1f-afa2-439d725a191c", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <!-- CSS -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
+    <meta name="robots" content="noindex,follow" />
+
+  </head>
+ 
+  
+ 
+
+    {% include 'navbar.html' %}
+
+    {% block body %}
+
+    <p class="path">Home / Men / T-Shirts / <b>Redwolf Hoodies > More By Redwolf</b></p>
+
+    <main class="container">
+      
+      
+      <!-- Left Column / Headphones Image -->
+      <div class="left-column">
+        
+        <img data-image="black" src="images/black.png" alt="">
+        <img data-image="blue" src="images/blue.png" alt="">
+        <img data-image="red" class="active" src="{{imgs}}"  alt="">
+      </div>
+
+
+      <!-- Right Column -->
+      <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+          <span>{{types}}</span>
+          <h1>{{name}}</h1>
+          <br/>
+          <p>The artwork will be screen printed to perfection on our 100% brushed cotton Redwolf branded hoodie featuring drawstrings and a hood.</p>
+        </div>
+
+        <!-- Product Configuration -->
+        <div class="product-configuration">
+
+          <!-- Product Color -->
+          <div class="product-color">
+            <span>Color</span>
+
+            <div class="color-choose">
+              <div>
+                <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+                <label for="red"><span></span></label>
+              </div>
+              <div>
+                <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                <label for="blue"><span></span></label>
+              </div>
+              <div>
+                <input data-image="black" type="radio" id="black" name="color" value="black">
+                <label for="black"><span></span></label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Cable Configuration -->
+          <div class="cable-config">
+            <span>Select Size:</span>
+
+            <div class="cable-choose">
+              <button>XS</button>
+              <button>S</button>
+              <button>M</button>
+              <button>L</button>
+              <button>XL</button>
+              <button>2XL</button>
+            </div>
+
+            <a class="lin" href="{{ url_for('login') }}">Login to Buy</a>
+          </div>
+        </div>
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+          <span>RS {{price}}.00</span>
+           <form  method="post">
+             <button type="submit" class="cart-btn" >Purchase</button>
+             
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8"></script>
+
+    {% endblock %}
+
+  
+</html>

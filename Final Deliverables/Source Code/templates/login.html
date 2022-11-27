@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login </title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+  <form action="{{ url_for('login') }}" method="post">
+    <h1>Login</h1>
+    <div class="content">
+      <div class="input-field">
+        <input  id="username" name="username" type="name" placeholder="Name">
+      </div>
+      <div class="input-field">
+        <input id="password" name="password" type="password" placeholder="Password" >
+      </div>
+      <a href="#" class="link">Forgot Your Password?</a>
+    </div>
+    <div class="action">
+        <button type="button" onclick="window.location.href='{{ url_for('register') }}';">Register</button>
+        <button type="submit" >Sign in</button>
+    </div>
+  </form>
+</div>
+<!-- partial -->
+ 
+
+</body>
+</html>

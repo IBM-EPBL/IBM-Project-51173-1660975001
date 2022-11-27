@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HRX Fashion</title>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "7cd5d475-a89e-4c80-a886-8d6e0d93e9dd", // The ID of this integration.
+          region: "eu-gb", // The region your integration is hosted in.
+          serviceInstanceID: "bc059956-dc2d-4a1f-afa2-439d725a191c", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+    
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="{{ url_for('static', filename='cart.css') }}">
+
+
+</head>
+    <body>
+         <nav class="navbar">
+          
+            <div class="logo"><b><img class="logo" src="{{url_for('static', filename='logo.jpg')}}" align="middle" /></b></div>
+        
+            <ul class="nav-links">
+             
+              <div class="menu">
+                <li><a  href="{{ url_for('indexs') }}">Home</a></li>    
+                <li><a  href="{{ url_for('home') }}"><p >Products</p></a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('account') }}">Account</a></li>
+                <li><a href="{{ url_for('cart') }}"><p class="online">Cart</p></a></li>
+                <li><a href="{{ url_for('admin') }}">Admin</a></li>
+                
+                
+              </div>
+            </ul>
+          </nav>
+
+          <header>
+            <h2>OUR CART</h2>
+           
+        </header>
+
+{% block body %}
+
+
+<div class="products">
+
+{% for cart in carts %}
+    <div class="row">
+          <div class="card">
+            <img class="images" src="{{cart.img}}">
+            <div class="details">
+            <b><p class="aa">Brand : {{cart.name}}</p></b>
+            <p class="bb">Type : {{cart.type}}</p>
+            <b><p class="cc">Price : RS : {{cart.price}}/-</p></b>
+          </div>
+          </div>
+        
+    </div>
+{% endfor %} 
+
+</div>
+ 
+{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>HRX Fashion</title>
+    
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+
+
+</head>
+    <body>
+
+      {% block body %}
+
+      <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><b><img class="logo" src="{{url_for('static', filename='logo.jpg')}}" align="middle" /></b></div>
+
+        <ul class="nav-links">
+         
+          <div class="menu">
+            <li><a  href="{{ url_for('indexs') }}">Home</a></li>    
+            <li><a  href="{{ url_for('home') }}"><p class="online">Products</p></a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('account') }}">Account</a></li>
+            <li><a href="{{ url_for('cart') }}">Cart</a></li>
+            <li><a href="{{ url_for('admin') }}">Admin</a></li>
+            
+          </div>
+        </ul>
+      </nav>
+
+           
+ 
+{% endblock %}
+</body>
+</html>

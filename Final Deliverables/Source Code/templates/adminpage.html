@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+ body {
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+ }
+ a {
+  text-decoration: none;
+ }
+ li {
+  list-style: none;
+ }
+
+ .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  
+  
+ }
+ .nav-links a {
+  color: #000;
+ }
+ /* LOGO */
+ .logo {
+  width:100px;
+  color: #e35869;
+  font-family:  sans-serif;
+  font-size: 32px;
+ }
+
+ .online{
+  color: #e35869;
+ }
+ /* NAVBAR MENU */
+ .menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+ }
+ .menu li:hover {
+  background-color: gray;
+  border-radius: 5px;
+  transition: 0.3s ease;
+ }
+ .menu li {
+  padding: 5px 14px;
+ }
+ /* DROPDOWN MENU */
+ .services {
+  position: relative; 
+ }
+ .dropdown {
+ 
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+ }
+ .dropdown li + li {
+  margin-top: 10px;
+ }
+ .dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+ }
+ .dropdown li:hover {
+  background-color: #4c9e9e;
+ }
+ .services:hover .dropdown {
+  display: block;
+ }
+
+ header{
+  width:100%;
+  height:80px;
+  background-color: #e35869;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+ }
+
+
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #e35869;
+  color: white;
+}
+
+
+.title{
+
+margin:20px;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+
+    <nav class="navbar">
+       
+        <div class="logo"><b><img class="logo" src="{{url_for('static', filename='logo.jpg')}}" align="middle" /></b></div>
+      
+        <ul class="nav-links">
+       
+          <div class="menu">
+           
+           
+            <li><a  href="{{ url_for('indexs') }}">Home</a></li>    
+            <li><a  href="{{ url_for('home') }}">Products</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('account') }}">Account</a></li>
+            <li><a href="{{ url_for('cart') }}">Cart</a></li>
+            <li><a href="{{ url_for('admin') }}"><p class="online">Admin</p></a></li>
+            
+            
+          </div>
+        </ul>
+      </nav>
+
+          <header>
+            <h2>ADMIN PAGE</h2>
+            
+        </header>
+
+        <div class="title"><h2>Total Purchases</h2></div>
+
+<table id="customers">
+  <tr>
+    <th>User</th>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Price</th>
+
+  </tr>
+
+
+  {% for cart in carts %}  
+  <tr>
+    <td>{{cart.user}}</td>
+    <td>{{cart.name}}</td>
+    <td>{{cart.qnty}}</td>
+    <td>{{cart.price}}</td>
+  </tr>
+
+  {% endfor %} 
+ 
+  
+</table>
+
+</body>
+</html>
+
+
