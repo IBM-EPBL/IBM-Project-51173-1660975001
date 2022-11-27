@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    background: #e35869;
+    font-family: 'Rubik', sans-serif;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+  
+  .form {
+    background: #fff;
+    width: 650px;
+    margin: 65px auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+  }
+  .form h1 {
+    padding: 35px 5px 0 10px;
+    font-weight: 300;
+  }
+  .form .content {
+    padding: 10px;
+    text-align: center;
+  }
+  .form  {
+    padding: 12px 5px;
+  }
+
+  input, textarea {
+    font-weight: 500;
+    padding: 10px 20px;
+    margin:10px;
+  }
+
+  textarea{
+    
+    height: 70px;
+    resize: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+  }
+
+  
+
+  .product-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    background-size: cover;
+    border-radius: 10px;
+    grid-row: span 2;
+    text-shadow: 0 0 10px #fff;
+}
+
+
+.text{
+    text-transform: capitalize;
+    color: #383838;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.fileupload{
+    width: 100px;
+    margin-right: 10px;
+}
+
+.upload-image-sec, .select-sizes{
+    background: #fff;
+    
+    padding: 20px;
+}
+
+.text img{
+    height: 20px;
+    margin-right: 10px;
+}
+
+.upload-catalouge{
+    width: 100%;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+}
+
+.upload-image{
+    width: 100%;
+    height: 100px;
+    background: #f5f5f5;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.upload-image:hover{
+    background: rgba(0, 0, 0, 0.2);
+    background-size: cover;
+}
+
+
+  .select-sizes,.pimages{
+    margin:10px;
+    border:.5px solid #222;
+    padding: 20px;
+}
+
+
+
+  .sizes{
+    margin-top: 30px;
+    display: -webkit-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.size-checkbox{
+    -webkit-appearance: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #383838;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    position: relative;
+    color: #383838;
+}
+
+.size-checkbox::after{
+    content: attr(value);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.size-checkbox:checked{
+    background: #383838;
+    color: #fff;
+}
+
+
+  .form  input ,textarea{
+    font-size: 16px;
+    display: block;
+    font-family: 'Rubik', sans-serif;
+    
+    padding: 10px 1px;
+    
+    
+    -webkit-transition: all .2s;
+    transition: all .2s;
+  }
+  .form  input::-webkit-input-placeholder {
+    text-transform: uppercase;
+  }
+  .form input::-moz-placeholder {
+    text-transform: uppercase;
+  }
+  .form input:-ms-input-placeholder {
+    text-transform: uppercase;
+  }
+  .form input::-ms-input-placeholder {
+    text-transform: uppercase;
+  }
+  .form .input-field input::placeholder {
+    text-transform: uppercase;
+  }
+  .form.input-field input:focus {
+    border-color: #222;
+  }
+  .form a.link {
+    text-decoration: none;
+    color: #747474;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  .form .action {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
+  .form .action button  {
+    width: 100%;
+    border: none;
+    padding: 18px;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #e8e9ec;
+    color: #777;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    letter-spacing: 0.2px;
+    outline: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .form .action button:hover  {
+    background: #d8d8d8;
+  }
+  .form .action button:nth-child(2)  {
+    background: #2d3b55;
+    color: #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 4px;
+  }
+  .form .action button:nth-child(2):hover  {
+    background: #3c4d6d;
+  }
+
+  .action{
+    margin: 0px;
+  }
